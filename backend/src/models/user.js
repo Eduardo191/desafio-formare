@@ -7,11 +7,6 @@ const userSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
-  userType: {
-    type: String,
-    required: true,
-    trim: true
-  },
   tokens: [{
     token: {
       type: String,
