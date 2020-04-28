@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import api from '../../services/api'
-//import './styles.css'
+import './styles.css'
 
 export default function Login() {
   const [name, setName] = useState('')
@@ -15,25 +15,24 @@ export default function Login() {
       localStorage.setItem('token', response.data.token)
       localStorage.setItem('userName', response.data.user.name)
       history.push('/messages')
-    } catch(err) {
+    } catch (err) {
       console.log(err)
       alert('Falha no login, tente novamente')
     }
   }
 
   return (
-    <div>
-      <form onSubmit={handleLogin}>
+    <div className="content">
+      <form className="login" onSubmit={handleLogin}>
         <h1>Faça seu logon ou crie uma conta</h1>
-
-        <input 
+        <input
           placeholder="Digite seu nome"
           value={name}
-          onChange={e => setName(e.target.value)} 
+          onChange={e => setName(e.target.value)}
         />
 
-        <button type="submit">Entrar</button>
-        <Link to="/new">Não tenho cadastro</Link>
+        <button className="button" type="submit">Entrar</button>
+        <Link className="link" to="/new">Não tenho cadastro</Link>
       </form>
     </div>
   )

@@ -2,7 +2,7 @@
   width: 500px;
   min-height: 560px;    
   margin: 0px auto;
-  position: relative;  
+  position: relative;   
 }
 
 .content p:first-child{
@@ -25,7 +25,7 @@ textarea:-moz-placeholder{
   font-style: italic;
 }
 
-.login{
+.new-account{
   position: absolute;
   top: 0px;
   width: 88%;   
