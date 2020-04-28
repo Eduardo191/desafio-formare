@@ -13,7 +13,7 @@ export default function NewAccount() {
       const response = await api.post('/users', { name })
       localStorage.setItem('token', response.data.user.token)
       localStorage.setItem('userName', response.data.user.name)
-      history.push('/messages')
+      history.push('/')
     } catch(err) {
       alert('Falha na criaçao da conta, tente novamente')
     }

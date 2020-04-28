@@ -12,7 +12,7 @@ export default function Login() {
     try {
       const response = await api.post('/users/login', { name })
 
-      localStorage.setItem('token', response.data.user.token)
+      localStorage.setItem('token', response.data.token)
       localStorage.setItem('userName', response.data.user.name)
       history.push('/messages')
     } catch(err) {
