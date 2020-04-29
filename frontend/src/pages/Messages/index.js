@@ -57,6 +57,10 @@ export default function Messages() {
     }
   }
 
+  function handleParticipants() {
+    history.push('/participants')
+  }
+
   return (
     <div className="content">
       <h1>Seja bem vindo(a), {userName}</h1>
@@ -76,6 +80,7 @@ export default function Messages() {
 
         <input placeholder="Digite aqui sua mensagem" value={text} onChange={e => setText(e.target.value)} />
         <button className="button" type="button" onClick={() => handleNewMessage()}>Enviar mensagem</button>
+        <button className="button" type="button" onClick={() => handleParticipants()}>Ver participantes</button>
       </ul>
     </div>
   )
